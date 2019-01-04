@@ -4,5 +4,5 @@ jobs:
     docker:
       - image: electronuserland/builder:wine
     steps:
-      - run: echo "test"
+      - checkout
       - run: ls -l .
