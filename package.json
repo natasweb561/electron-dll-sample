@@ -1,0 +1,25 @@
+{
+  "name": "electron-dll-sample",
+  "version": "1.0.0",
+  "description": "Compile Electron for windows with Ciecle CI",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natasweb561/electron-dll-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natasweb561/electron-dll-sample/issues"
+  },
+  "homepage": "https://github.com/natasweb561/electron-dll-sample#readme",
+  "dependencies": {
+    "electron": "^4.0.0",
+    "electron-rebuild": "^1.8.2",
+    "ffi": "^2.3.0"
+  }
+}
