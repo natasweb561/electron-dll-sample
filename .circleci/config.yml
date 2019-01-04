@@ -1,0 +1,8 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: electronuserland/builder:wine
+    steps:
+      - run: echo "test"
+      - run: ls -l .
