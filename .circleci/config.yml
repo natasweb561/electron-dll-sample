@@ -6,12 +6,13 @@ jobs:
     steps:
       - checkout
       - run: npm i node-gyp -g
-      - run: npm config set arch win
+      - run: npm config set arch ia32
       # - run: npm config set loglevel silly
       - run: node -v
       - run: npm -v
       - run: npm config list
       - run: node-gyp -v
+      - run: cmake --version
       - run: npm i
       - run: ls -l .
       - run: ls -l node_modules
