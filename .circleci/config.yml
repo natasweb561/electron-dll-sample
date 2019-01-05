@@ -5,4 +5,10 @@ jobs:
       - image: electronuserland/builder:wine
     steps:
       - checkout
+      - run: npm i
       - run: ls -l .
+      - run: ls -l node_modules
+      - run: npm run build
+      - run: ls -l .
+      - store_artifacts:
+          path: dist
