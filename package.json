@@ -36,8 +36,8 @@
         "to": ".",
         "filter": [
           "libfactorial.dll",
-          "**/node-ffi",
-          "**/ref"
+          "node-ffi",
+          "ref"
         ]
       }
     ]
