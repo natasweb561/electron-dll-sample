@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run: npm i node-gyp -g
       - run: npm config set arch win
-      - run: npm config set loglevel silly
+      # - run: npm config set loglevel silly
       - run: node -v
       - run: npm -v
       - run: npm config list
