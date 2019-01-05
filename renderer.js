@@ -3,7 +3,12 @@
 // All of the Node.js APIs are available in this process.
 
 // const ffi = require('ffi')
-const ffi = require('./node-ffi')
+let ffi
+try {
+    ffi = require('./node-ffi')
+} catch (error) {
+    ffi = require('./resources/app/node-ffi')
+}
 const fs = require('fs')
 const path = require('path')
 
