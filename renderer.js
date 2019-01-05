@@ -2,17 +2,18 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 
+const fs = require('fs')
+const path = require('path')
+
+const DDL = 'libfactorial.dll'
+
 // const ffi = require('ffi')
 let ffi
 try {
     ffi = require('./node-ffi')
 } catch (error) {
-    ffi = require('./resources/app/node-ffi')
+    ffi = require(path.join(process.cwd(), 'node-ffi'))
 }
-const fs = require('fs')
-const path = require('path')
-
-const DDL = 'libfactorial.dll'
 
 let ddlPath = path.join(process.cwd(), DDL)
 if (!fs.existsSync(ddlPath)) {
