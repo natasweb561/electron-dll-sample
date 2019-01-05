@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: electronuserland/builder:wine
+      - image: electronuserland/builder:wine-mono
     steps:
       - checkout
       - run: npm i node-gyp -g
@@ -12,6 +12,7 @@ jobs:
       - run: npm -v
       - run: npm config list
       - run: node-gyp -v
+      - run: mcs -v
       - run: npm i
       - run: ls -l .
       - run: ls -l node_modules
