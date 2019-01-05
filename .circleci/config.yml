@@ -5,10 +5,14 @@ jobs:
       - image: electronuserland/builder:wine
     steps:
       - checkout
+      - run: npm i node-gyp -g
+      - run: node -v
+      - run: npm -v
+      - run: node-gyp -v
       - run: npm i
       - run: ls -l .
       - run: ls -l node_modules
+      - run: ./node_modules/.bin/electron-rebuild
       - run: npm run build
-      - run: ls -l .
       - store_artifacts:
           path: dist
